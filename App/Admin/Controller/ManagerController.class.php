@@ -1,0 +1,8 @@
+<?php
+namespace Admin\Controller;
+use Think\Controller;
+class ManagerController extends Controller {
+    public function index(){
+		echo "这是后台";        
+	}
+}
