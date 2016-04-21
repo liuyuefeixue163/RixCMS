@@ -32,7 +32,7 @@
             </div>
             <h3>欢迎使用 Rix后台管理系统</h3>
 
-            <form class="m-t" role="form" action="/RixCMS/index.php/Admin/User/" method="post">
+            <form class="m-t" role="form" action="/RixCMS/index.php/admin/user" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name="uname" placeholder="用户名" required="">
                 </div>
