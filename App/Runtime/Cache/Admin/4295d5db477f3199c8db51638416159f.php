@@ -18,7 +18,7 @@
     <script type="text/javascript">
         function reImg(){
             var img = document.getElementById("code");
-            img.src = "verify?rnd=" + Math.random();            
+            img.src = "verify?rnd=" + Math.random();
         }
     </script>
 </head>
@@ -32,22 +32,21 @@
             </div>
             <h3>欢迎使用 Rix后台管理系统</h3>
 
-            <form class="m-t" role="form" action="/RixCMS/index.php/admin/user" method="post">
+            <form class="m-t" role="form" action="<?php echo U('User/doLogin');?>" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name="uname" placeholder="用户名" required="">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name="passwd"  placeholder="密码" required="">
                 </div>
-                
                 <div class="form-group">
                     <input style="width: 120px;float:left;margin-right:5px" maxlength="4" name="code" type="text" class="form-control" placeholder="验证码" required="">
                 	<span>
-                		<img src="<?php echo U('Admin/User/verify');?>" onclick="reImg()" id="code"   width="80" height="30"/>
+                		<img src="<?php echo U('Admin/User/verify');?>" onclick="this.src='<?php echo U('Admin/User/verify');?>?id='+Math.random()" id="code"   width="80" height="30"/>
                 		<a href="#"  onclick="reImg()">看不清换一张</a>
                 	</span>
                 </div>
-                
+
                 <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
             </form>

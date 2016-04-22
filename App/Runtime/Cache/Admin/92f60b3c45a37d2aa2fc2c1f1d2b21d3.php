@@ -65,14 +65,14 @@
 
 				<div class="navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-	
+
 
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="<?php echo ADMIN_PUBLIC; ?>/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎光临,</small>
-									ADMIN
+									<?php echo $_SESSION['admin']['admin_uname'];?>
 								</span>
 
 								<i class="icon-caret-down"></i>
@@ -96,7 +96,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="<?php echo U('User/logout');?>">
 										<i class="icon-off"></i>
 										退出
 									</a>
@@ -151,7 +151,7 @@
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-desktop"></i>
-								<span class="menu-text">商品管理 </span>
+								<span class="menu-text"> 房源管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
@@ -160,58 +160,28 @@
 								<li>
 									<a href="elements.html" target="iframe">
 										<i class="icon-double-angle-right"></i>
-										商品列表
+										发布房源
 									</a>
 								</li>
 
 								<li>
 									<a href="buttons.html" target="iframe">
 										<i class="icon-double-angle-right"></i>
-										发布(案例&艺术)
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-sort"></i>
-								<span class="menu-text"> 商品分类管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="<?php echo U('Admin/Cate/index');?>" target="iframe">
-										<i class="icon-double-angle-right"></i>
-										商品分类列表
+										发布记录
 									</a>
 								</li>
 
 								<li>
-									<a href="<?php echo U('Admin/Cate/addCate');?>" target="iframe">
+									<a href="treeview.html" target="iframe">
 										<i class="icon-double-angle-right"></i>
-										发布商品分类
+										刷新记录
 									</a>
 								</li>
-                                
-							</ul>
-						</li>
 
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-star-empty"></i>
-								<span class="menu-text"> 会员管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
 								<li>
-									<a href="form-elements.html">
+									<a href="jquery-ui.html" target="iframe">
 										<i class="icon-double-angle-right"></i>
-										会员列表
+										复制房源
 									</a>
 								</li>
 
@@ -224,11 +194,43 @@
 
 							</ul>
 						</li>
-						
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 账户管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="tables.html">
+										<i class="icon-double-angle-right"></i>
+										余额充值
+									</a>
+								</li>
+
+								<li>
+									<a href="jqgrid.html">
+										<i class="icon-double-angle-right"></i>
+										充值记录
+									</a>
+								</li>
+                                
+                                <li>
+									<a href="jqgrid.html">
+										<i class="icon-double-angle-right"></i>
+										密码设定
+									</a>
+								</li>
+							</ul>
+						</li>
+
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-edit"></i>
-								<span class="menu-text"> 订单管理 </span>
+								<span class="menu-text"> 论坛管理 </span>
 
 								<b class="arrow icon-angle-down"></b>
 							</a>
@@ -237,36 +239,7 @@
 								<li>
 									<a href="form-elements.html">
 										<i class="icon-double-angle-right"></i>
-										配送
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										支付
-									</a>
-								</li>
-								
-
-							</ul>
-						</li>
-						
-						
-						
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-comment"></i>
-								<span class="menu-text"> 评论管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										评论列表
+										发布公告
 									</a>
 								</li>
 
@@ -276,158 +249,6 @@
 										进入论坛
 									</a>
 								</li>
-
-							</ul>
-						</li>
-						
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-shopping-cart"></i>
-								<span class="menu-text"> 配送与支付 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										配送
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										支付
-									</a>
-								</li>
-								
-
-							</ul>
-						</li>
-						
-						
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-tasks"></i>
-								<span class="menu-text"> 统计管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										平台流量统计
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										进入论坛
-									</a>
-								</li>
-								
-
-							</ul>
-						</li>
-						
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-key"></i>
-								<span class="menu-text"> 权限管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										平台流量统计
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										进入论坛
-									</a>
-								</li>
-								
-
-							</ul>
-						</li>
-						
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-camera-retro"></i>
-								<span class="menu-text"> 相册管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										图片列表
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										发布企业相册
-									</a>
-								</li>
-								
-
-							</ul>
-						</li>
-						
-						
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-home"></i>
-								<span class="menu-text"> 系统管理 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								
-								
-								<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										数据备份
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										数据还原
-									</a>
-								</li>
-								
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										网站信息设置
-									</a>
-								</li>
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										站长信息设置
-									</a>
-								</li>
-								
 
 							</ul>
 						</li>
